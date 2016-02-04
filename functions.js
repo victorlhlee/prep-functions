@@ -150,23 +150,23 @@ function eatFood(firstName, lastName, food){
  //return myFullName + " loves to eat " + food + "! ";
 }
 
-var eaten = eatFood("Big", "Poppa", "pizza");
+var eaten = eatFood("Biggie", "Smalls", "bacon-cheese pizza, baby baby!");
 console.log(eaten);
 
 
 /*Function - repeater
 This function will print to the screen X amount of times. Where X is the value stored at howMany. Inside of this function it will check if the value of canDrinkBeer, if the value is true the message will be "Bacon Pancakes, makin' Bacon Pancakes..." othewise the message will be "Let it go.... LET IT GOOOOOOoOoOoOo..."*/
 
-function repeater(){
- if(canDrinkBeer === true){
+function repeater(num){
+  if(canDrinkBeer === true){
   message = "Bacon pancakes, makin' Bacon pancakes...";
- }else{
+  }else{
   message = "Let it go...Let it Goooooooooooo";
  }
- for(var i = 0; i<=howMany; i++){
+  for(var i = 0; i<num; i++){
   console.log(message);
  }
 }
 
-var howMany = repeater();
+var howMany = repeater(5);
 console.log(howMany);
