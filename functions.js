@@ -7,50 +7,52 @@ Below are some specifications for Functions to be built.*/
 
 //Declare 2 Variables
 
-var a = 3;
-var b = 8;
+var a = 2;
+var b = 3;
 
 /*Function - add
 This function returns the result of adding a and b together. Store this value in a variable named sum.*/
 
-function add(a, b){
-  return a + b;
+function add(n1, n2){
+  return n1 + n2;
 }
-var sum = a + b;
-console.log(sum);
+var sum = add(a,b);
+console.log('function add: ' + sum);
+
 
 /*Function - subtract
 This function returns the result of subtracting b from a Store this value in a variable named difference*/
 
-function subtract(a,b){
-  return b - a;
+function subtract(n1, n2){
+  return n2 - n1;
 }
-var difference = b - a;
-console.log(difference);
+
+var difference = subtract(a, b);
+console.log('function subtract: ' + difference);
 
 /*Function - multiply
 This function returns the result of multiplying b by a. Store this value in a variable named product*/
 
-function multiply (a, b){
+function multiply(n1, n2){
   return b * a;
 }
-var product = b * a;
-console.log(product);
+var product = multiply(a, b);
+console.log('function multiply: ' + product);
 
 /*Function - checkDifference
 This function accesses the value stored in the difference variable and uses this number to return the string "My football team lost X times this week", where X is the value stored in difference.*/
 
 function checkDifference(){
-  return "My football team lost " + difference + " times this week";
+  return "My shetty football team lost " + difference + " times this week";
 }
-
 console.log(checkDifference());
+
 
 /*Function - checkSum
 This function checks the value stored at sum and uses that number to print to the screen the phrase "I CAN ADDZ X NUMBERS" where X is the value stored in the variable sum .*/
 
 function checkSum(){
-  return "I can addz " + sum + " numbers";
+  return "I CAN ADDZ " + sum + " NUMBERS G!";
 }
 
 console.log(checkSum());
@@ -58,36 +60,36 @@ console.log(checkSum());
 /*Function - checkProduct
 This function checks the value stored at product and multiplies it by the number stored at difference and then prints the result to the console.*/
 
-function checkProduct(){
-  return product * difference;
+function checkProduct(n1, n2){
+  return n1 * n2;
 }
 
-var totalProduct = product * difference;
-console.log(totalProduct);
+var totalProduct = checkProduct(product, difference);
+console.log('function checkProduct = ' + totalProduct);
 
 /*Function - addThenSubtract
 This function takes three Number arguments named by you, then adds the first two arguments together. Then with the sum of that operation, subtract the value at the third argument. This function should make use of your previous functions.
 
 example: addThenSubtract(4, 5, 7); //-> returns 2 because 4 + 5 - 7 = 2*/
 
-function addThenSubtract(x, y , z){
-  return sum - z;
+function addThenSubtract(n1, n2, n3){
+  return (n1 + n2) - n3;
 }
+var addThenMinus = addThenSubtract(sum, difference, product);
+console.log('function addThenSubtract = ' + addThenMinus);
 
-var addedSubtracted = sum - 3;
-console.log(addedSubtracted);
 
 /*Function - addThenMultiply
 This function takes three Number arguments named by you, then adds the first two arguments together. Then with the sum of that operation multiply it by the third argument. This function also should make use of your previous functions.
 
 Store the return of this function to a variable named howMany*/
 
-function addThenMultiply(x, y, z){
-  return sum * z;
+function addThenMultiply(n1, n2, n3){
+  return (n1 + n2) * n3;
 }
+var howMany = addThenMultiply(sum, difference, product);
+console.log('function addThenMultiply = ' + howMany);
 
-var howMany = sum * 3;
-console.log(howMany);
 
 /*Function - createFullName
 @param Datatype: String firstName
@@ -98,11 +100,11 @@ This function takes two String arguments firstName and lastName. This function r
 Call this function and pass your first and last name into it. Store the return value to a variable named myFullName*/
 
 function createFullName(firstName, lastName){
-  return firstName + " " + lastName;
+  return "Yo, my damn name is " + firstName + " " + lastName + "!";
 }
-
-var myFullName = createFullName("squishy", "worm");
+var myFullName = createFullName("Samuel", "Jackson");
 console.log(myFullName);
+
 
 /*Function - verifyDrinkingAge
 @param Datatype: Number age
@@ -119,20 +121,24 @@ function verifyDrinkingAge(age){
   }
 }
 
-var canDrinkBeer = verifyDrinkingAge(23);
-console.log(canDrinkBeer);
+var canDrinkBeer = verifyDrinkingAge(50);
+console.log('Brah, u can drink or wat? ' + canDrinkBeer);
+
+
 
 /*Function - throwParty
 This function checks the value stored at the canDrinkBeer variable and if the value is false it should print to a message to the screen, "The Party will have tons of Cake!" otherwise this message should be "This Party will have an open bar".*/
 
+
 function throwParty(){
   if(canDrinkBeer === false){
-    return "The party will have tons of cake!";
+    return "The pahty will have tons of Carrot Cake!";
   }else{
-    return "This party will have an open bar";
+    return "Dis pahty will have an open bah cuz!";
   }
 }
 console.log(throwParty());
+
 
 /*Function - eatFood
 This function takes 3 arguments firstName, lastName, food and prints out a message to your screen. Internally this function will make use of the createFullName function you created earlier.
@@ -146,22 +152,36 @@ exmaple input: if someone called your program like this eatFood( "Peter", "Bojan
 example output: "Peter Bojanglesloves loves to eat California Burritos"*/
 
 function eatFood(firstName, lastName, food){
- return firstName + " " + lastName + " loves to eat " + food + "! ";
- //return myFullName + " loves to eat " + food + "! ";
+  return firstName + " " + lastName + " loves to eat " + food +".";
 }
 
-var eaten = eatFood("Biggie", "Smalls", "bacon-cheese pizza, baby baby!");
+var eaten = eatFood("Biggie", "Smallz", "manapuas");
 console.log(eaten);
 
 
 /*Function - repeater
 This function will print to the screen X amount of times. Where X is the value stored at howMany. Inside of this function it will check if the value of canDrinkBeer, if the value is true the message will be "Bacon Pancakes, makin' Bacon Pancakes..." othewise the message will be "Let it go.... LET IT GOOOOOOoOoOoOo..."*/
 
-function repeater(num){
-  if(canDrinkBeer === true){
-  message = "Bacon pancakes, makin' Bacon pancakes...";
+function repeater(printX, oldEnuff){
+  for(var i = 0; i<printX; i++){
+    if(oldEnuff){
+    console.log("Bacon Pancakes, makin' Bacon Pankcakes...");
   }else{
-  message = "Let it go...Let it Goooooooooooo";
+    console.log("Let it go....LET IT GOOOOOOoOoOoOo");
+  }
+}
+}
+
+repeater(howMany, canDrinkBeer);
+
+
+
+
+/*function repeater(num){
+  if(canDrinkBeer === true){
+   message = "Bacon pancakes, makin' Bacon pancakes...";
+  }else{
+   message = "Let it go...Let it Goooooooooooo";
  }
   for(var i = 0; i<num; i++){
   console.log(message);
@@ -169,4 +189,4 @@ function repeater(num){
 }
 
 var howMany = repeater(5);
-console.log(howMany);
+console.log(howMany);*/
